@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
+<configuration>
+	
+	<!-- 건재님 소스 --> 
+	<settings>
+    	<setting name="logImpl" value="STDOUT_LOGGING"/>
+	</settings>
+	
+
+	<typeAliases>
+		<typeAlias type="com.ezen.biz.dto.ProductVO" alias="product" />
+		<typeAlias type="com.ezen.biz.dto.MemberVO" alias="member" />
+		<typeAlias type="com.ezen.biz.dto.AddressVO" alias="address" />
+		<typeAlias type="com.ezen.biz.dto.CartVO" alias="cart" />
+		<typeAlias type="com.ezen.biz.dto.OrderVO" alias="order" /> <!-- order-mapping.xml 내 <select id="listOrderById" resultType="order"> -->
+		<typeAlias type="com.ezen.biz.dto.QnaVO" alias="qna" />
+		<typeAlias type="com.ezen.biz.dto.ProductCommentVO" alias="comment" />
+		<typeAlias type="com.ezen.biz.dto.AdminVO" alias="admin" />
+	</typeAliases>
+	
+	<!-- SQL 매핑 파일 등록 -->
+	<mappers>
+		<mapper resource="mappings/product-mapping.xml" />
+		<mapper resource="mappings/member-mapping.xml" />
+		<mapper resource="mappings/cart-mapping.xml" />
+		<mapper resource="mappings/order-mapping.xml" />
+		<mapper resource="mappings/qna-mapping.xml" />
+		<mapper resource="mappings/comment-mapping.xml" />
+		<mapper resource="mappings/admin-mapping.xml" />
+	</mappers>
+</configuration>
